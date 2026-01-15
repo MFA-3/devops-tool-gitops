@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-backend
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-backend
+  template:
+    metadata:
+      labels:
+        app: cloud-backend
+    spec:
+      containers:
+      - name: backend
+        image: farhan4hmed/cloud-backend:latest
+        ports:
+        - containerPort: 3000
