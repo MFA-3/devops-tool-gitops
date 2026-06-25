@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: farhan4hmed/cloud-backend:v2 # Update the image tag to v2
+        image: farhan4hmed/cloud-backend:v1 
         ports:
         - containerPort: 3000
